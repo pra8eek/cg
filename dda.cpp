@@ -13,7 +13,7 @@ int main()
     dy = 1.0 * dy/l ;
     for (int i=0 ; i< l ;i++)
     {
-        putpixel(x1 , y1, i%15);
+        putpixel(x1 , y1, 6);
         delay(10);
         x1+=dx;
         y1+=dy;
