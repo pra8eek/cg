@@ -54,10 +54,10 @@ void lineClip(int x, int y, int xx, int yy)
             int outCode = getCode(xx,yy);
             double m = 1.0*(yy-y)/(xx-x);
             //outcode 1- top, 2-bottom, 4-right, 8-left
-             if(outCode == 2)
-                line( x , y , x-((y-y1)/m) , y1 );
-             else if(outCode == 1)
+             if(outCode == 1)
                 line( x , y , x-((y-y2)/m) , y2 );
+             else if(outCode == 2)
+                line( x , y , x-((y-y1)/m) , y1 );
              else if(outCode == 4)
                 line( x , y , x2 , y-m*(x-x2) );
              else if(outCode == 8)
